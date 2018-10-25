@@ -3,8 +3,8 @@ package org.sc.service.myb.services.impl;
 
 import java.util.List;
 
+import org.sc.service.myb.dao.StudentDao;
 import org.sc.service.myb.entity.Student;
-import org.sc.service.myb.mapper.StudentMapper;
 import org.sc.service.myb.services.StudentService;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 
 
 @Service
-public class StudentServiceImpl extends ServiceImpl<StudentMapper,Student>
+public class StudentServiceImpl extends ServiceImpl<StudentDao,Student>
         implements StudentService {
 
     @Override

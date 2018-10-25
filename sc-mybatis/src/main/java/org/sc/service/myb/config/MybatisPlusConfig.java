@@ -14,7 +14,7 @@ import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
  *
  */
 @Configuration
-@MapperScan("org.sc.service.myb.mapper*")
+@MapperScan("org.sc.service.myb.dao*")
 public class MybatisPlusConfig {
     /**mybatis-plus 分页插件*/
     @Bean

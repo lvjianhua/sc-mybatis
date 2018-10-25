@@ -8,7 +8,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableDiscoveryClient
-@MapperScan("org.sc.service.myb.mapper")
+@MapperScan("org.sc.service.myb.dao")
 @SpringBootApplication
 @EnableSwagger2
 public class MybatisApplication {
