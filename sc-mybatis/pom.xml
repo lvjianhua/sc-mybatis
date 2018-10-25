@@ -98,24 +98,37 @@
             <version>2.0</version>
         </dependency>-->
 
-
+		<!--阿里druid数据库链接依赖-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.1.9</version>
         </dependency>
-        
+        <!-- swagger -->
         <dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.6.1</version>
-		</dependency>
+		</dependency>		
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.6.1</version>
 		</dependency>          		      		
         
+		<!-- activeMq消息队列 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-activemq</artifactId>
+            <version>1.4.0.RELEASE</version>
+        </dependency>
+
+		<!-- 代码生成器:mybatis-dsc-generator  -->
+		<dependency>
+		    <groupId>com.github.flying-cattle</groupId>
+		    <artifactId>mybatis-dsc-generator</artifactId>
+		    <version>1.0.0.RELEASE</version>
+		</dependency>
         
         <dependency>
 			<groupId>org.slf4j</groupId>

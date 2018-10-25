@@ -16,14 +16,11 @@ import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
 @Configuration
 @MapperScan("org.sc.service.myb.mapper*")
 public class MybatisPlusConfig {
-    /**
-     * mybatis-plus 分页插件
-     */
+    /**mybatis-plus 分页插件*/
     @Bean
     public PaginationInterceptor paginationInterceptor(){
         PaginationInterceptor page = new PaginationInterceptor();
-        // 设置方言
-        page.setDialectType("mysql");
+        page.setDialectType("mysql");// 设置方言
         return page;
     }
 
