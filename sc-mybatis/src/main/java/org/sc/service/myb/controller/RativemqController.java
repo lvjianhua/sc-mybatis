@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.extern.slf4j.Slf4j;
 
 
-@Api(value ="rativemq接口")
+@Api(value ="rativemq",description = "消息中间件rativemq")
 @RestController
 @RequestMapping("/sc-mybatis/student")
 @Slf4j

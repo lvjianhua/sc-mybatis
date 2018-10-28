@@ -129,7 +129,18 @@
 		    <artifactId>mybatis-dsc-generator</artifactId>
 		    <version>1.0.0.RELEASE</version>
 		</dependency>
-        
+        <!-- generator -->
+        <dependency>
+		    <groupId>com.github.flying-cattle</groupId>
+		    <artifactId>mybatis-dsc-generator</artifactId>
+		    <version>2.0.0.RELEASE</version>
+		</dependency>
+		<!-- mybatis的分页插件 -->
+		<dependency>
+		    <groupId>com.github.pagehelper</groupId>
+		    <artifactId>pagehelper</artifactId>
+		    <version>4.1.0</version>
+		</dependency>
         <dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>

@@ -1,71 +1,50 @@
+/**
+ * @filename:Student 2018年10月28日
+ * @project sc-mybatis  V1.0
+ * Copyright(c) 2018 lv Co. Ltd. 
+ * All right reserved. 
+ */
 package org.sc.service.myb.entity;
 
-
+import java.io.Serializable;
 import java.util.Date;
-
-
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.annotations.TableName;
-import com.baomidou.mybatisplus.enums.IdType;
+import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
+
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.ToString;
 import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
-/**
- * 实体类
- * 
- * @author lv
- *
+/**   
+ *  
+ * @Description:  学生
+ * @Author:       lv   
+ * @CreateDate:   2018年10月28日
+ * @Version:      V1.0
+ *    
  */
-@TableName("tb_student")
 @Data
-@NoArgsConstructor(access = AccessLevel.PUBLIC)
-@AllArgsConstructor(access = AccessLevel.PUBLIC)
-public class Student {
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+public class Student implements Serializable {
 
-    @TableId(value="id",type=IdType.AUTO)
-    private Integer id;
-
-    @TableField("stu_name")
-    private String stuName;
-
-    @TableField("stu_number")
-    private String stuNumber;
-
-    private Integer gender;
-    private Integer age;
-
-    private String password;
-
-    @TableField("stu_mobile")
-    private String stuMobile;
-
-/**
-     * 家长姓名*/
-
-
-    @TableField("par_name")
-    private String parName;
-
-    @TableField("par_mobile")
-    private String parMobile;
-
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    @TableField("create_time")
-    private Date createTime;
-
-    @TableField("is_delete")
-    private Integer isDelete;
-
-    @TableField("role_id")
-    private Integer roleId;
-
-
-
-    // setter和getter方法省略
-
-
+	private static final long serialVersionUID = 1540738749490L;
+	
+	@ApiModelProperty(name = "id" , value = "id")
+	private Integer id;
+	@ApiModelProperty(name = "stuName" , value = "学生姓名")
+	private String stuName;
+	@ApiModelProperty(name = "age" , value = "学生年龄")
+	private Integer age;
+	@ApiModelProperty(name = "password" , value = "密码")
+	private String password;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@JsonFormat(pattern="yyyy-MM-dd",timezone = "GMT+8")
+	@ApiModelProperty(name = "createTime" , value = "创建时间")
+	private Date createTime;
+	@ApiModelProperty(name = "isDelete" , value = "是否删除")
+	private Integer isDelete;
 }
